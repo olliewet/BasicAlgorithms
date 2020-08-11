@@ -1,0 +1,13 @@
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\obj\Debug\netcoreapp3.1\BasicAlgorithms.csprojAssemblyReference.cache
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\obj\Debug\netcoreapp3.1\BasicAlgorithms.AssemblyInfoInputs.cache
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\obj\Debug\netcoreapp3.1\BasicAlgorithms.AssemblyInfo.cs
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\obj\Debug\netcoreapp3.1\BasicAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\bin\Debug\netcoreapp3.1\BasicAlgorithms.exe
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\bin\Debug\netcoreapp3.1\BasicAlgorithms.deps.json
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\bin\Debug\netcoreapp3.1\BasicAlgorithms.runtimeconfig.json
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\bin\Debug\netcoreapp3.1\BasicAlgorithms.runtimeconfig.dev.json
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\bin\Debug\netcoreapp3.1\BasicAlgorithms.dll
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\bin\Debug\netcoreapp3.1\BasicAlgorithms.pdb
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\obj\Debug\netcoreapp3.1\BasicAlgorithms.dll
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\obj\Debug\netcoreapp3.1\BasicAlgorithms.pdb
+C:\Users\Ollie\Desktop\Project\BasicAlgorithms\obj\Debug\netcoreapp3.1\BasicAlgorithms.genruntimeconfig.cache
