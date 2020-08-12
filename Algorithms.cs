@@ -59,5 +59,41 @@ namespace BasicAlgorithms
         }
         #endregion
 
+        #region Fibonacci 
+        public static void Fibonacci_Seq()
+        {
+            //Declaring Users Input 
+            int fiblength;
+
+            //Assigning Value To the starter numbers
+            int f1 = 0, f2 = 1, f3;
+
+
+            Console.Write("How many fibonacci number do you want: ");
+
+            //Reading Users Input
+            fiblength = int.Parse(Console.ReadLine());
+
+            //Printing the inital Numbers
+            Console.Write(f1 + " " + f2 + " ");
+
+            // I Less than Length, increase number by 1 
+            for (int i = 2; i < fiblength; ++i)
+            {
+                //F3 equals f1 + f2 
+                f3 = f1 + f2;
+
+                //Printing F3 
+                Console.Write(f3 + " ");
+
+                //f1 becomes the old f2 , f2 becomes the old f3 
+                f1 = f2;
+                f2 = f3;
+            }
+            Console.WriteLine("Thats it! the length is {0}", fiblength);
+        }
+
+        #endregion
+
     }
 }
