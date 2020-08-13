@@ -14,7 +14,20 @@ namespace BasicAlgorithms
             Algorithms.Fibonacci_Seq();
             */
             //Algorithms.changeReturn();
-            Algorithms.percentageShop();
+            //Algorithms.percentageShop();
+
+            Console.WriteLine("Enter A Number");
+            int number = int.Parse(Console.ReadLine());
+            bool prime = Algorithms.isPrime(number);
+            if(prime)
+            {
+                Console.WriteLine("{0} is Prime", number);
+            }
+            else
+            {
+                Console.WriteLine("{0} is not a Prime Number",number);
+            }
+
         }
     }
 }
