@@ -11,6 +11,10 @@ Algorithms currently in the Project
 
 - FizzBuzz
 - IsEven 
+- Change Return Program
+- Fibonacci Sequence 
+- Calculate Percentage
+
 
 Algorithms aimed to be implemented 
 - 
@@ -20,7 +24,6 @@ Algorithms aimed to be implemented
 - Find PI to the Nth Digit
 - Find e to the Nth Digit
 - Prime Factorization
-- Change Return Program
 
 Link
 - 
