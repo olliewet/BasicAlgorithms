@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace BasicAlgorithms
 {
@@ -16,6 +17,7 @@ namespace BasicAlgorithms
             //Algorithms.changeReturn();
             //Algorithms.percentageShop();
 
+            /*
             Console.WriteLine("Enter A Number");
             int number = int.Parse(Console.ReadLine());
             bool prime = Algorithms.isPrime(number);
@@ -27,6 +29,21 @@ namespace BasicAlgorithms
             {
                 Console.WriteLine("{0} is not a Prime Number",number);
             }
+            */
+            /*
+            Algorithms.reservestring();
+
+            if(Algorithms.isPalindrome("racecar"))
+            {
+                Console.WriteLine("Is Paldrome");
+            }
+            else
+            {
+                Console.WriteLine("Is not");
+            }
+
+            */
+            Algorithms.countwordsinstring();
 
         }
     }

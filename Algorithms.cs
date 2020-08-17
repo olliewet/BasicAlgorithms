@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace BasicAlgorithms
@@ -156,5 +158,36 @@ namespace BasicAlgorithms
             return true;
 
         }
+
+        public static void reservestring()
+        {
+            Console.WriteLine("Enter a String you want reversing");
+            string userinput = Console.ReadLine();
+            string reversedString = new string(userinput.Reverse().ToArray());
+            Console.WriteLine(reversedString);
+        }
+
+        public static bool isPalindrome(string word)
+        {
+            //First Reversing the String Using LinQ
+            string reversedString = new string(word.Reverse().ToArray());
+
+            //Returning True or False
+            return string.Compare(word, reversedString) == 0 ? true : false;
+        }
+
+        public static void countwordsinstring()
+        {
+            //Asking For Users Input
+            Console.WriteLine("Enter a String Of Words");
+            string userinput = Console.ReadLine();
+            
+            //Splitting input on '' which adds to counter
+            int counter = userinput.Split(' ').ToList().Count;
+
+            //Printing the amount of words in string
+            Console.WriteLine("There is {0} Words in the String ", counter);
+        }
+
     }
 }
