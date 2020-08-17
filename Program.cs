@@ -43,7 +43,18 @@ namespace BasicAlgorithms
             }
 
             */
-            Algorithms.countwordsinstring();
+            //Algorithms.countwordsinstring();
+
+            string[] stArray = new string[]
+            {
+                "Password1" , "pASS" , "Three", "Olie"
+            };
+            
+            foreach (var r in Algorithms.FriendOrFoe(stArray))
+            {
+                Console.WriteLine(r);
+            }
+           
 
         }
     }

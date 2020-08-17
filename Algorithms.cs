@@ -189,5 +189,22 @@ namespace BasicAlgorithms
             Console.WriteLine("There is {0} Words in the String ", counter);
         }
 
+        public static int GetVowelCount(string str)
+        {
+            return str.Count(i => "aeiou".Contains(i));
+        }
+
+
+        //Used to find in the list the names that have the length
+        public static IEnumerable<string> FriendOrFoe(string[] names)
+        {
+            return names.Where(name => name.Length == 4);
+        }
+
+        // Returns the Output of a triangle of odd numbers
+        public static long rowSumOddNumbers(long n)
+        {
+            return n * n * n;
+        }
     }
 }
