@@ -17,7 +17,7 @@ namespace BasicAlgorithms
         public static void fizzbuzz()
         {
             //Loop From 1 - 100 
-            for( int num = 1 ; num <= 100; num++)
+            for (int num = 1; num <= 100; num++)
             {
                 //If Number is Divideable By 3 and 5 its FizzBuzz
                 if (num % 3 == 0 && num % 5 == 0)
@@ -30,9 +30,9 @@ namespace BasicAlgorithms
                     Console.WriteLine("{0} Buzz", num);
                 }
                 //If Number is Divideable 5 its Buzz
-                else if ( num % 3 == 0 )
+                else if (num % 3 == 0)
                 {
-                    Console.WriteLine("{0} Fizz" , num);
+                    Console.WriteLine("{0} Fizz", num);
                 }
                 //Else Print The Number To Console 
                 else
@@ -99,7 +99,7 @@ namespace BasicAlgorithms
 
         public static void changeReturn()
         {
-            
+
             decimal change;
             Console.WriteLine("Please Enter Cost Of Product:");
             decimal costProduct = decimal.Parse(Console.ReadLine());
@@ -114,8 +114,8 @@ namespace BasicAlgorithms
             else
             {
                 change = moneyGiven - costProduct;
-                Console.WriteLine("You Have been Given {0} Back" ,change);
-            }      
+                Console.WriteLine("You Have been Given {0} Back", change);
+            }
         }
 
         public static void percentageShop()
@@ -129,7 +129,7 @@ namespace BasicAlgorithms
             decimal percentage = (costProduct / 100) * percent;
 
             decimal total = costProduct - percentage;
-            Console.WriteLine("The Cost Of A Product is Now £{0}",total);
+            Console.WriteLine("The Cost Of A Product is Now £{0}", total);
         }
 
         //Help From Stack Over Flow 
@@ -140,7 +140,7 @@ namespace BasicAlgorithms
             if (number == 2 || number == 3 || number == 5) return true;
             if (number % 2 == 0 || number % 3 == 0 || number % 5 == 0) return false;
 
-            
+
             var boundary = (int)Math.Floor(Math.Sqrt(number));
 
             // You can do less work by observing that at this point, all primes 
@@ -181,7 +181,7 @@ namespace BasicAlgorithms
             //Asking For Users Input
             Console.WriteLine("Enter a String Of Words");
             string userinput = Console.ReadLine();
-            
+
             //Splitting input on '' which adds to counter
             int counter = userinput.Split(' ').ToList().Count;
 
@@ -206,5 +206,101 @@ namespace BasicAlgorithms
         {
             return n * n * n;
         }
+
+        public static void Find(int[] integers)
+        {
+            int even = 0;
+            int odd = 0;
+
+
+            int n;
+            for (int i = 0; i < integers.Length; i++)
+            {
+                if (integers[i] % 2 == 0)
+                {
+                    even++;
+                }
+                else
+                {
+                    odd++;
+                }
+
+            }
+            if (even < odd)
+            {
+                Console.WriteLine("even is the outlier");
+                for (int i = 0; i < integers.Length; i++)
+                {
+                    if (integers[i] % 2 == 0)
+                    {
+                        Console.WriteLine(integers[i]);
+                    }
+
+                }
+            }
+            else if (odd < even)
+            {
+                Console.WriteLine("Odd is the outlier");
+                for (int i = 0; i < integers.Length; i++)
+                {
+                    if (integers[i] % 2 != 0)
+                    {
+                        Console.WriteLine(integers[i]);
+                    }
+                }
+            }
+        }
+
+        public static int Find2(int[] integers)
+        {
+            int even = 0;
+            int odd = 0;
+
+
+
+            for (int i = 0; i < integers.Length; i++)
+            {
+                if (integers[i] % 2 == 0)
+                {
+                    even++;
+                }
+                else
+                {
+                    odd++;
+
+                }
+            }
+
+
+            if (even < odd)
+            {
+                Console.WriteLine("even is the outlier");
+                for (int i = 0; i < integers.Length; i++)
+                {
+                    if (integers[i] % 2 == 0)
+                    {
+                        return integers[i];                   
+                    }
+                    
+                }
+            }
+            else 
+            {
+                Console.WriteLine("Odd is the outlier");
+                for (int i = 0; i < integers.Length; i++)
+                {
+                    if (integers[i] % 2 != 0)
+                    {
+                        return integers[i];
+                    }
+                }
+            }
+            int n = 0;
+            return n;
+        }
+
+
     }
 }
+
+

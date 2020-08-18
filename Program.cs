@@ -45,6 +45,7 @@ namespace BasicAlgorithms
             */
             //Algorithms.countwordsinstring();
 
+            /*
             string[] stArray = new string[]
             {
                 "Password1" , "pASS" , "Three", "Olie"
@@ -55,6 +56,11 @@ namespace BasicAlgorithms
                 Console.WriteLine(r);
             }
            
+            */
+            int[] exampleTest1 = { 10, 12, 14, 16 ,17};
+            int[] exampleTest2 = { 11, 13, 14, 15, 17 };
+            Algorithms.Find(exampleTest1);
+            Algorithms.Find(exampleTest2);
 
         }
     }
