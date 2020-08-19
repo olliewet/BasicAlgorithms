@@ -279,12 +279,12 @@ namespace BasicAlgorithms
                 {
                     if (integers[i] % 2 == 0)
                     {
-                        return integers[i];                   
+                        return integers[i];
                     }
-                    
+
                 }
             }
-            else 
+            else
             {
                 Console.WriteLine("Odd is the outlier");
                 for (int i = 0; i < integers.Length; i++)
@@ -298,9 +298,118 @@ namespace BasicAlgorithms
             int n = 0;
             return n;
         }
+        public static int FindDeletedNumber(List<int> startingList, List<int> mixedList)
+        {
+            var result = Enumerable.Range(0, 10).Except(startingList);
+            return -1;
+        }
 
+        public static int GetUnique(IEnumerable<int> numbers)
+        {
+            IEnumerable<int> uniqueItems = numbers.Distinct<int>();
+
+
+            var cleanArray = numbers.GroupBy(x => x)
+             .Where(x => x.Count() == 1)
+             .SelectMany(x => x)
+             .ToArray();
+
+            foreach (int value in cleanArray)
+            {
+                return value;
+            }
+
+
+            return -1;
+
+        }
+
+        public static string repeatStr(int n, string s)
+        {
+            if (!string.IsNullOrEmpty(s))
+            {
+                StringBuilder builder = new StringBuilder(s.Length * n);
+
+                for (int i = 0; i < n; i++) builder.Append(s);
+
+                return builder.ToString();
+            }
+
+            return string.Empty;
+        }
+
+        /// <summary>
+        /// Find 2 Smallest Numbers
+        /// </summary>
+        /// <param name="numbers"></param>
+        public static int sumTwoSmallestNumbers(int[] numbers)
+        {
+            return numbers.OrderBy(i => i).Take(2).Sum();
+
+        }
+
+        public static int add(int n1, int n2)
+        {
+            return n1 + n2;
+        }
+
+        public static bool IsTriangle(int a, int b, int c)
+        {
+            if (a + b > c)
+            {
+                return true;
+            }
+            else if (a + c > b)
+            {
+                return true;
+            }
+            else if (b + c > a)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool IsSquare(int n)
+        {
+            //Get the Square Number 
+            double result = Math.Sqrt(n);
+
+            //Check if the square number when divided by 1 has any remainders
+            bool isSquare = result % 1 == 0;
+            return isSquare;
+        }
+
+        public static string ToWeirdCase(string s)
+        {
+            return string.Join(" ",
+              s.Split(' ')
+              .Select(w => string.Concat(
+                w.Select((ch, i) => i % 2 == 0 ? char.ToUpper(ch) : char.ToLower(ch)
+              ))));
+        }
+
+        public static void HasA(string[] names)
+        {
+            var myLinqQuery = from name in names
+                              where name.Contains('a')
+                              select name;
+            foreach (var name in myLinqQuery)
+                {
+                Console.WriteLine(name);
+                }
+        }
 
     }
 }
+
+
+
+    
+
+
 
 
