@@ -207,6 +207,8 @@ namespace BasicAlgorithms
             return n * n * n;
         }
 
+
+
         public static void Find(int[] integers)
         {
             int even = 0;
@@ -348,6 +350,30 @@ namespace BasicAlgorithms
 
         }
 
+        public static string HighAndLow(string numbers)
+        {
+            //Declaring New Array 
+            int[] intarray = new int[100];
+
+            //Converting String Into Array 
+            intarray = Array.ConvertAll(numbers.Split(' '), int.Parse);
+
+            //Grabbing Max And Min Of Array 
+            int maxValue = intarray.Max();
+            int lowValue = intarray.Min();
+
+            //Returning Values
+            return maxValue + " " + lowValue;
+        }
+
+        public static int CockroachSpeed(double x)
+        {
+            double distance;
+            distance = x * 27.7778;
+            return (int)distance;
+            //#Happy Coding! ^_^
+        }
+
         public static int add(int n1, int n2)
         {
             return n1 + n2;
@@ -402,6 +428,9 @@ namespace BasicAlgorithms
                 Console.WriteLine(name);
                 }
         }
+
+
+
 
     }
 }
