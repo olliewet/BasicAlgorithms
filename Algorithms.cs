@@ -3,9 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace BasicAlgorithms
 {
+    public static class Extensions
+    {
+        public static int findIndex<T>(this T[] array, T item)
+        {
+            return Array.IndexOf(array, item);
+        }
+    }
     class Algorithms
     {
 
@@ -424,14 +432,113 @@ namespace BasicAlgorithms
                               where name.Contains('a')
                               select name;
             foreach (var name in myLinqQuery)
-                {
+            {
                 Console.WriteLine(name);
-                }
+            }
         }
 
+        #region test 
+        public static int Test(string numbers)
+        {
+            int[] integers = new int[100];
+            integers = Array.ConvertAll(numbers.Split(' '), int.Parse);
+            int even = 0;
+            int odd = 0;
 
+            //Finding Out Which Ones have More evens or odds
+            for (int i = 0; i < integers.Length; i++)
+            {
+                if (integers[i] % 2 == 0)
+                {
+                    even++;
+                }
+                else
+                {
+                    odd++;
 
+                }
+            }
 
+            int item;
+            if (even < odd)
+            {
+                for (int i = 0; i < integers.Length; i++)
+                {
+                    if (integers[i] % 2 == 0)
+                    {
+                        item = integers[i];
+                        int index = integers.findIndex(item);
+                        index = index + 1;
+                        return index;
+                    }
+
+                }
+            }
+            else
+            {
+
+                for (int i = 0; i < integers.Length; i++)
+                {
+                    if (integers[i] % 2 != 0)
+                    {
+                        item = integers[i];
+                        int index = integers.findIndex(item);
+                        index = index + 1;
+                        return index;
+                    }
+                }
+            }
+            int n = 0;
+            return n;
+        }
+
+        public static int TestBetter(string numbers)
+        {
+            var nums = numbers.Split(' ').Select((s, i) => new { Value = int.Parse(s), Index = i });
+            var even = nums.Where(x => x.Value % 2 == 0);
+            var odd = nums.Where(x => x.Value % 2 == 1);
+            return even.Count() == 1 ? even.First().Index + 1 : odd.First().Index + 1;
+        }
+        #endregion
+
+        public static string[] Solution(string str)
+        {
+            return Regex.Matches(str + "_", @"\w{2}").Select(x => x.Value).ToArray();
+        }
+
+        public static int GetAverage(int[] marks)
+        {
+            double average = marks.Average();
+            int interval = (int)Math.Floor(average);
+            return interval;
+
+            // OR 
+
+            //return (int)marks.Average();
+        }
+
+        public static string Greet(string name)
+        {
+
+            return "Hello," + name + "how are you doing today?";
+        }
+
+        public class MathCheck
+        {
+            public static int AreaOrPerimeter(int l, int w)
+            {
+                if (l == w) // Square 
+                {
+                    // Work out Area
+                    return l * w;
+                }
+                else
+                {
+                    // Work out Perimeter 
+                    return l + l + w + w;
+                }
+            }
+        }
     }
 }
 

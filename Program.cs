@@ -80,9 +80,20 @@ namespace BasicAlgorithms
             */
 
             //Console.WriteLine(Algorithms.IsTriangle(3, 3, 3));
+            /*
             string[] names = { "Bill", "Steve", "James", "Mohan" };
             Algorithms.HasA(names);
+            */
 
+
+            foreach (var item in Algorithms.Solution("olliedryisthebest"))
+            {
+                if(item.Length == 2)
+                {
+
+                }
+                Console.WriteLine(item.ToString());
+            }
 
         }
     }
